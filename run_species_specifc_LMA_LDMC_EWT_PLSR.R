@@ -2,7 +2,7 @@
 #
 #
 #
-#   This R script is provided as supplementary material of Helsen et al. 2021 Ecolgocial Indicators.
+#   This R script is provided as supplementary material of Helsen & Bassi et al. 2021 Ecolgocial Indicators.
 #
 #   The script illustrate how to estimate LMA, LDMC and EWT using the publication dataset 
 #   and the provided species specific model for Rosa rugosa, Rubus caesius, Jacobea vulgaris 
