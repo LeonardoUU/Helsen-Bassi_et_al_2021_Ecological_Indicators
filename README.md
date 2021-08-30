@@ -1,4 +1,4 @@
-# Helsen-Bassi_et_al_2020_ecological_indicators
+# Helsen-Bassi_et_al_2020_Ecological_Indicators
 Intraspecific PLSR model of 4 species to estimate LMA(mg/cm2), LDMC (mg/mg) and EWT (mg/cm2) using leaf reflectance data (400-2450 nm). The 4 species are: *Rosa rugosa*, *Rubus caesius*, *Jacobea vulgaris*, *Hieracium umbellatum*.
 
 ## Contains:
