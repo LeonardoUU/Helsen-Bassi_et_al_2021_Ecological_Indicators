@@ -55,8 +55,7 @@ rm(list.of.packages.CRAN,new.packages.CRAN)
 wd <- 'scratch'
 require("knitr")
 if (! file.exists(wd)) dir.create(file.path("~",wd),recursive=TRUE, showWarnings = FALSE)
-#setwd(file.path("~",wd)) # set working directory
-opts_knit$set(root.dir = file.path("~",wd))
+setwd(file.path("~",wd)) # set working directory
 getwd()  # check wd
 
 #' 
