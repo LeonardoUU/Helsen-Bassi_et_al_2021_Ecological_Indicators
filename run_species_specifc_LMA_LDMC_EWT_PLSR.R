@@ -32,7 +32,7 @@ list.of.packages.CRAN <- c("ggplot2","remotes","devtools","readr","RCurl","httr"
 
 ### check for dependencies and install if needed
 new.packages.CRAN <- list.of.packages.CRAN[!(list.of.packages.CRAN %in% installed.packages()[,"Package"])]
-if(length(new.packages.CRAN)) install.packages(new.packages)
+if(length(new.packages.CRAN)) install.packages(new.packages.CRAN)
 
 # Check for github 'spectratrait' library and install if needed 
 # Note: * you should pay careful attention at this stage to any 
