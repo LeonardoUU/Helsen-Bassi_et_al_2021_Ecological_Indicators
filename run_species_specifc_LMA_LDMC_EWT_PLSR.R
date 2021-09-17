@@ -130,7 +130,7 @@ plot_spectra_summary<- ggplot2::ggplot(data = Plot_data, aes(x= wavelength,y= Re
 
 
 ### save plot 
-png(file=file.path("~",wd,'Species_spectra_summary_plot.png'),height=3000,
+png("Species_spectra_summary_plot.png" ,height=3000,
     width=3900, res=340)
 
 plot_spectra_summary
@@ -335,7 +335,7 @@ plot_all_legend<- cowplot::plot_grid(legend, plot_all,  nrow=2,
                                      rel_widths = c( 0.8, 1))
 
 
-png(file = file.path("~",wd,"LMA_LMDC_EWT_validation_plot.png"),
+png("LMA_LMDC_EWT_validation_plot.png",
     height=1300,
     width=3900, res=340)
 plot_all_legend
