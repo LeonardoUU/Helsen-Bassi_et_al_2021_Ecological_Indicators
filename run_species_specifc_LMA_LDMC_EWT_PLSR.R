@@ -22,13 +22,13 @@
 
 #---------------- Close all devices, delete all variables and prepare all libraries ----------------------
 
-rm(list=ls(all=TRUE))   # clear workspace
+rm(list=ls())   # clear workspace
 graphics.off()          # close any open graphics
 closeAllConnections()   # close any open connections to files
 
 ### get all required libraries to run script
 list.of.packages.CRAN <- c("ggplot2","remotes","devtools","readr","RCurl","httr","pls","dplyr",
-                           "reshape2","here","plotrix","gridExtra","scales","knitr", "tidyr")  
+                           "reshape2","here","plotrix","gridExtra","scales","knitr", "tidyr","cowplot")  
 
 ### check for dependencies and install if needed
 new.packages.CRAN <- list.of.packages.CRAN[!(list.of.packages.CRAN %in% installed.packages()[,"Package"])]
@@ -52,7 +52,7 @@ rm(list.of.packages.CRAN,new.packages.CRAN)
 #' 
 #-----------------Set working directory (scratch space)-----------------------------------------------
 
-wd <- 'scratch'
+wd <- 'scratch'  #CHANGE THIS TO YOUR PREFERRED DIRECTORY 
 require("knitr")
 if (! file.exists(wd)) dir.create(file.path("~",wd),recursive=TRUE, showWarnings = FALSE)
 setwd(file.path("~",wd)) # set working directory
@@ -120,7 +120,7 @@ plot_spectra_summary<- ggplot2::ggplot(data = Plot_data, aes(x= wavelength,y= Re
   scale_linetype_manual(name= "Summary spectra",
                         labels=c("Mean","+ / - SD",""),
                         values=c("solid", "dashed"))+
-  labs(x = "Wavelenght (nm)",
+  labs(x = "Wavelength (nm)",
      y = "Reflectance",
      linetype= "Legend") +
   theme(legend.position="top")+
@@ -341,6 +341,6 @@ png(file = file.path("~",wd,"LMA_LMDC_EWT_validation_plot.png"),
 plot_all_legend
 dev.off()
 
-rm(list=ls(all=TRUE))   # clear workspace
+rm(list=ls())   # clear workspace
 
 
